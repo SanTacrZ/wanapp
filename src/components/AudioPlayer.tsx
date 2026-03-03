@@ -4,16 +4,17 @@ import { Volume2, VolumeX } from 'lucide-react';
 interface Props {
   text: string;
   label?: string;
+  lang?: string;
 }
 
-export default function AudioPlayer({ text, label }: Props) {
+export default function AudioPlayer({ text, label, lang = 'es-CO' }: Props) {
   const [playing, setPlaying] = useState(false);
 
   const handlePlay = () => {
     if ('speechSynthesis' in window) {
       setPlaying(true);
       const utterance = new SpeechSynthesisUtterance(text);
-      utterance.lang = 'es-CO';
+      utterance.lang = lang;
       utterance.onend = () => setPlaying(false);
       window.speechSynthesis.speak(utterance);
     }

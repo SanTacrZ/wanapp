@@ -15,7 +15,7 @@ export default function Sidebar() {
 
   return (
     <aside className="hidden lg:flex flex-col w-56 bg-selva-950 border-r border-selva-800 min-h-screen py-8 px-3">
-      <nav className="flex flex-col gap-1">
+      <nav aria-label="Navegación principal" className="flex flex-col gap-1">
         {sideItems.map(({ path, label, icon: Icon }) => {
           const active = location.pathname === path;
           return (

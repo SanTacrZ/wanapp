@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Map, Globe, BookOpen, Palette, Mountain, X, Search } from 'lucide-react';
+import { Map, Globe, BookOpen, Palette, Mountain, Video, X, Search } from 'lucide-react';
 import PageTransition from '../components/PageTransition';
 import { entradasEncarta, EntradaEncarta } from '../data/encarta';
 
@@ -10,6 +10,7 @@ const categorias = [
   { id: 'historia', label: 'Historia', icon: BookOpen },
   { id: 'arte', label: 'Arte', icon: Palette },
   { id: 'territorio', label: 'Territorio', icon: Mountain },
+  { id: 'video', label: 'Video', icon: Video },
 ];
 
 const categoriaStyles: Record<string, string> = {
